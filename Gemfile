@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.0.0"
 gem "rails", "~> 7.0.2", ">= 7.0.2.2"
 gem "sprockets-rails"
-gem "sqlite3", "~> 1.4"
+
 gem "puma", "~> 5.0"
 gem "importmap-rails"
 gem "turbo-rails"
@@ -28,4 +28,14 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+end
+
+
+group :development, :test do
+ gem 'sqlite3'
+end
+
+group :production do
+ gem 'pg', '0.17.1'
+ gem 'rails_12factor', '0.0.2'
 end
