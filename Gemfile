@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.0"
 gem "rails", "~> 7.0.2", ">= 7.0.2.2"
-gem "sprockets-rails"
+gem "sprockets-rails", ">= 2.3.2"
 
 gem "puma", "~> 5.0"
 gem "importmap-rails"
@@ -12,9 +12,9 @@ gem "stimulus-rails"
 gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
-gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
-gem 'sassc-rails', '>= 2.1.0'
+gem 'bootstrap', '~> 5.1.3'
 gem 'jquery-rails'
+gem 'devise', '~> 4.8', '>= 4.8.1'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
